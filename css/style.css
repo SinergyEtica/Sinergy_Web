@@ -1,0 +1,49 @@
+body{
+    background-color: black;
+}
+
+.teamSinergy{
+    padding-top: 40px;
+    height: 85vh;
+    width: 100%;
+    
+}
+.textoMotivador{
+    font-size: 30px;
+    background-color: #ffc107;
+    h1{     
+        text-align: center;
+    }
+}
+
+.container-images {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    margin: 20px 0;
+
+}
+
+.image {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: var(--tam-raio-borda-botoes);
+}
+.galeria_imagens_inicio{
+    h2{
+        color: #ffc107;
+    }
+    .container-images{
+    margin: 50px;
+    box-shadow: 0 0 0 5px #ffc107;
+    img{
+        margin: 20px;
+    }
+}
+}
+
+.participacao{
+  h1{color: #ffc107; text-align: center; font-size: 100px; font-style:initial}
+  h2{color: aliceblue; text-align: center; font-size: 80px;}
+}
