@@ -83,6 +83,124 @@
     <h1>PARTICIPAÇÕES</h1>
     <H2>DA EQUIPE</H2>
     </div>
+    <br>
+    <section class="galeria_imagens_meio">
+      <div class="container-images-meio">          
+      <div class="image">
+        <div class="data">
+        <h4>Data: 27/08/2024</h4>
+        </div>
+          <img src="assets/foto_sinergy_grandPrix.jpg" width="720" height="587.5">
+          <h2>FINAL DO GRAND PRINX - HACK E ÉTICA</h2>
+          <br>
+          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, laboriosam cum accusantium repellat voluptatem harum fugiat asperiores autem et labore, perferendis a maxime aperiam voluptatum earum nostrum reprehenderit tempore voluptates!</h5>
+      </div>
+      <div class="image">
+        <div class="data">
+          <h4>Data: 24/09/2024</h4>
+          </div>
+          <img src="assets/foto_sinergy_semana.jpg" width="720" height="587.5">
+          <h2>SEMANA DA INTEGRIDADE FIRJAN</h2>
+          <br>
+          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos excepturi amet, ipsum omnis molestiae ut perspiciatis hic totam voluptates dolor aperiam consequatur. Possimus nostrum quae iusto veritatis dolores accusantium architecto.</h5>
+      </div>
+    </section>
+
+
+      <div class="textoFormulário">
+  <h1>Formulário</h1>
+  </div>
+  <form action="" id="meuFormulario">
+    <label for="">Nome</label>
+    <input type="text" name="nome" id="nome" required>
+    <br>
+    <label for="">Idade</label>
+    <input type="num" name="idade" id="idade" required>
+    <br>    
+    <label for="">Mensagem</label>
+    <input type="text" name="mensagem" id="mensagem" required>
+    <br>
+    <button type="submit">Enviar</button>
+    
+</form>
+<div id="resultado"></div>
+<script>
+  function verificarMaioridade(nome,idade) {
+      if(idade>= 18){
+          return nome + ", você é maior de idade."
+      }
+      else{
+          return nome + ", você é menor de idade. Acesso Bloqueado "
+      }
+  }
+  function exibirResultado(mensagem){
+      document.getElementById('resultado').textContent = mensagem;
+  }
+  
+  document.getElementById('meuFormulario').addEventListener('submit', function(event)
+  {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const idade = parseInt(document.getElementById('idade').value);
+      const mensagem = verificarMaioridade(nome,idade);
+      exibirResultado(mensagem);
+  } 
+)
+
+</script>
+<script type="module">
+  
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyDzGcsglnxsyH-M1Pc4mRQ6ZvfEQShAmAk",
+authDomain: "bd-test-8bd25.firebaseapp.com",
+projectId: "bd-test-8bd25",
+storageBucket: "bd-test-8bd25.appspot.com",
+messagingSenderId: "354904433092",
+appId: "1:354904433092:web:f55fb511eabaad66930491",
+measurementId: "G-JTNV8WT70Q"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);  
+
+//Conecte ao Firestore
+const db = getFirestore(app)
+
+  document.getElementById('meuFormulario').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+
+const nome = document.getElementById('nome').value;
+const idade = document.getElementById('idade').value;
+const mensagem = document.getElementById('mensagem').value;
+
+try {
+  await addDoc(collection(db, 'contatos'), {
+    nome: nome,
+    idade: idade,
+    mensagem: mensagem,
+    timestamp: serverTimestamp() 
+  });
+  alert('Dados enviados com sucesso!');
+  document.getElementById('meuFormulario').reset(); 
+} catch (error) {
+  console.error('Erro ao enviar os dados: ', error);
+}
+});
+</script>
+
+
 </div>    
 </body>
 </html>

@@ -1,4 +1,5 @@
 body{
+    color: aliceblue;
     background-color: black;
 }
 
@@ -12,6 +13,7 @@ body{
     font-size: 30px;
     background-color: #ffc107;
     h1{     
+        color: #000000;
         text-align: center;
     }
 }
@@ -22,6 +24,12 @@ body{
     text-align: center;
     margin: 20px 0;
 
+}
+.container-images-meio{
+    display: grid;
+    grid-template-columns: 50% 50% 50%;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .image {
@@ -46,4 +54,43 @@ body{
 .participacao{
   h1{color: #ffc107; text-align: center; font-size: 100px; font-style:initial}
   h2{color: aliceblue; text-align: center; font-size: 80px;}
+}
+
+.galeria_imagens_meio{
+    h2{
+        margin-top: 10px;
+        background-color: #ffc107;
+        border-radius: 10px;
+        margin-left: 150px;
+        width: 700px;
+        color: #000000;
+    }
+    h5{
+        color: white;
+    }
+    .container-images{
+        margin: 50px;
+        box-shadow: 0 0 0 5px #ffc107;
+        img{
+            margin: 20px;
+        }
+    }
+    .data{
+        margin-left: 150px;
+        width: 700px;
+        background-color: #ffc107;
+        border-radius: 10px;
+        h4{
+            color: black;
+        }
+    }
+}
+
+.textoFormulário{
+    font-size: 50px;
+    background-color: #ffc107;
+    h1{     
+        text-align: center;
+        color: #000000;
+    }
 }
