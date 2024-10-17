@@ -57,55 +57,78 @@
       </div>
     </div>
   </nav>
-  
-  <img src="assets/equipe_sinergy.jpeg" class="teamSinergy">
       
-  <div class="textoMotivador">
-  <h1>Somente mudando nossas bases conseguimos construir um futuro melhor e mais inclusivo, que respeite a todos, para criar a SINERGIA PERFEITA.</h1>
-  </div>
 
-    <section class="galeria_imagens_inicio">
-      <div class="container-images">          
-      <div class="image">
-          <img src="assets/sobre_nós.jpeg" width="353.1" height="587.5">
-          <h2>SOBRE NÓS</h2>
-      </div>
-      <div class="image">
-          <img src="assets/projetos.jpeg" width="353.1" height="587.5">
-          <h2>PROJETOS</h2>
-      </div>
-      <div class="image">
-          <img src="assets/resultados.jpeg" width="353.1" height="587.5">
-          <h2>RESULTADOS</h2>
-      </div>
-    </section>
-    <div class="participacao">
-    <h1>PARTICIPAÇÕES</h1>
-    <H2>DA EQUIPE</H2>
-    </div>
-    <section class="galeria_imagens_meio">
-      <div class="container-images-meio">          
-      <div class="image_imagens_meio">
-        <div class="data">
-        <h4>Data: 27/08/2024</h4>
-        </div>
-          <img src="assets/foto_sinergy_grandPrix.jpg" width="720" height="587.5">
-          <h2>FINAL DO GRAND PRINX - HACK E ÉTICA</h2>
-          <br>
-          <br>
-          <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, laboriosam cum accusantium repellat voluptatem harum fugiat asperiores autem et labore, perferendis a maxime aperiam voluptatum earum nostrum reprehenderit tempore voluptates!</h5>
-      </div>
-      <div class="image_imagens_meio">
-        <div class="data">
-          <h4>Data: 24/09/2024</h4>
-          </div>
-          <img src="assets/foto_sinergy_semana.jpg" width="720" height="587.5">
-          <h2>SEMANA DA INTEGRIDADE FIRJAN</h2>
-          <br>
-          <br>
-          <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos excepturi amet, ipsum omnis molestiae ut perspiciatis hic totam voluptates dolor aperiam consequatur. Possimus nostrum quae iusto veritatis dolores accusantium architecto.</h5>
-      </div>
-    </section>
+  <h1 class="text_title_sac">Formulário SAC</h1>
+
+
+  <form class="sac-form" action="" id="meuFormulario">
+    <label for="">Nome</label>
+    <input type="text" name="nome" id="nome" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
+    <br>
+    <label for="">Email</label>
+    <input type="email" name="email" id="email" required >
+    <br>    
+    <label for="">Mensagem</label>
+    <textarea type="text" name="mensagem" id="mensagem" required></textarea>
+    <br>
+    <button type="submit" class="forms-button">Enviar</button>
+    
+</form>
+
+<script type="module">
   
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
+import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyDzGcsglnxsyH-M1Pc4mRQ6ZvfEQShAmAk",
+authDomain: "bd-test-8bd25.firebaseapp.com",
+projectId: "bd-test-8bd25",
+storageBucket: "bd-test-8bd25.appspot.com",
+messagingSenderId: "354904433092",
+appId: "1:354904433092:web:f55fb511eabaad66930491",
+measurementId: "G-JTNV8WT70Q"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);  
+
+//Conecte ao Firestore
+const db = getFirestore(app)
+
+  document.getElementById('meuFormulario').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+
+const nome = document.getElementById('nome').value;
+const email = document.getElementById('email').value;
+const mensagem = document.getElementById('mensagem').value;
+
+try {
+  await addDoc(collection(db, 'contatos'), {
+    nome: nome,
+    email: email,
+    mensagem: mensagem,
+    timestamp: serverTimestamp() 
+  });
+  alert('Dados enviados com sucesso!');
+  document.getElementById('meuFormulario').reset(); 
+} catch (error) {
+  console.error('Erro ao enviar os dados: ', error);
+}
+});
+</script>
+
+
+</div>    
 </body>
 </html>

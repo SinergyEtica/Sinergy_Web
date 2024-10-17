@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Embedded</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/powerbi-client/2.13.1/powerbi.min.js"></script>
+    <style>
+        #dashboardContainer {
+            width: 100%;
+            height: 90vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="dashboardContainer"></div>
+
+    <script>
+        var embedConfig = {
+            type: 'report',
+            id: 'ID_DO_RELATORIO',
+            embedUrl: 'URL_DE_INCORPORACAO',
+            accessToken: 'SEU_TOKEN_DE_ACESSO',
+            tokenType: models.TokenType.Embed,
+            settings: {
+                filterPaneEnabled: false,
+                navContentPaneEnabled: false
+            }
+        };
+
+        // Obtendo a referência do container
+        var dashboardContainer = document.getElementById('dashboardContainer');
+        
+        // Embedding do dashboard
+        var powerbiService = powerbi.embed(dashboardContainer, embedConfig);
+    </script>
+</body>
+</html>
