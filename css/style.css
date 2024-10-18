@@ -4,10 +4,8 @@ body{
 }
 
 .teamSinergy{
-    padding-top: 40px;
     height: 85vh;
     width: 100%;
-    
 }
 .textoMotivador{
     font-size: 30px;
@@ -145,19 +143,16 @@ textarea {
 }
 
 .text_title_sac{
-    margin-top: 120px;
+    padding-top: 20px;
     margin-left: 50px;
 }
 
 .sobre{
     width: 100%;
-    padding: 20px;
     margin: 0px;
     font-size: 30px;
     background-color: #100f0d;
-    padding-top: 100px;
     margin-top: 0px;
-    padding-bottom: 50px;
     h1{
         color: #ffffff;
         text-align: center;
@@ -203,5 +198,72 @@ textarea {
 }
 
 .dashboard{
-    padding-top: 100px;
+    padding-top: 95px;
+}
+header{
+    padding-bottom: 90px;
+}
+.jogo_de_cartas{
+    padding-left: 10%;
+    
+    width: 650px;
+    display: inline-block;
+    
+    h1{
+        color: #ffffff;
+        border-radius: 200px;
+        width: 140px;
+        padding-left: 50%;
+    }
+    img{
+        padding-top: 20px;
+    }
+}
+.textoSinergy2{
+    max-width:60%;
+    padding: 100px;
+    margin: 0px;    
+    font-size: 30px;
+    padding-left: 20%;
+    display: inline-block;
+    h1{     
+        color: #ffffff;
+        text-align: justify;
+    }
+}
+
+.jogoCartas{
+    width: 60%;
+    height: 80%;
+    display: block;
+    margin-left: auto;
+      margin-right: auto;
+}
+
+.textoSinergy_reconhecimentos{
+    max-width:60%;
+    padding: 100px;
+    margin: 0px;    
+    font-size: 30px;
+    padding-left: 10%;
+    display: inline-block;
+    h1{     
+        color: #ffffff;
+        text-align: justify;
+    }
+}
+.premio_sinergy{
+    padding-right: 25%;
+    
+    width: 650px;
+    display: inline-block;
+    
+    img{
+        width: 500px;
+        height: 650px;
+        border-radius: 20px;
+    }
+}
+.reconhecimentos_inicio{
+    padding-top: 50px;
 }
