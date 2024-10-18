@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    
-    <title>Sinergy</title>
+    <title>Dashboard Power BI</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        iframe {
+            width: 100%;
+            height: 750px;
+            border: none;
+        }
+    </style>
 </head>
-<body>  
-  
+<body style="background-color: black;">
+
   <header>
     <nav class="navbar navbar-light bg-warning fixed-top">
       <div class="container-fluid">
@@ -62,78 +76,6 @@
       </div>
     </nav>
   </header>
-      
-
-  <h1 class="text_title_sac">Formulário SAC</h1>
-
-
-  <form class="sac-form" action="" id="meuFormulario">
-    <label for="">Nome</label>
-    <input type="text" name="nome" id="nome" required pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$">
-    <br>
-    <label for="">Email</label>
-    <input type="email" name="email" id="email" required >
-    <br>    
-    <label for="">Mensagem</label>
-    <textarea type="text" name="mensagem" id="mensagem" required></textarea>
-    <br>
-    <button type="submit" class="forms-button">Enviar</button>
-    
-</form>
-
-<script type="module">
-  
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics.js";
-import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-apiKey: "AIzaSyDzGcsglnxsyH-M1Pc4mRQ6ZvfEQShAmAk",
-authDomain: "bd-test-8bd25.firebaseapp.com",
-projectId: "bd-test-8bd25",
-storageBucket: "bd-test-8bd25.appspot.com",
-messagingSenderId: "354904433092",
-appId: "1:354904433092:web:f55fb511eabaad66930491",
-measurementId: "G-JTNV8WT70Q"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);  
-
-//Conecte ao Firestore
-const db = getFirestore(app)
-
-  document.getElementById('meuFormulario').addEventListener('submit', async function(event) {
-      event.preventDefault();
-
-
-const nome = document.getElementById('nome').value;
-const email = document.getElementById('email').value;
-const mensagem = document.getElementById('mensagem').value;
-
-try {
-  await addDoc(collection(db, 'contatos'), {
-    nome: nome,
-    email: email,
-    mensagem: mensagem,
-    timestamp: serverTimestamp() 
-  });
-  alert('Dados enviados com sucesso!');
-  document.getElementById('meuFormulario').reset(); 
-} catch (error) {
-  console.error('Erro ao enviar os dados: ', error);
-}
-});
-</script>
-
-
-</div>    
+    <iframe class="dashboard" src="https://app.powerbi.com/reportEmbed?reportId=a55ff01d-6ae6-41b7-af48-9bca6076edd7&autoAuth=true&ctid=d0c698d4-e4ea-4ee9-a79d-f2d7a78399c8" frameborder="0" allowFullScreen="true"></iframe>
 </body>
 </html>
