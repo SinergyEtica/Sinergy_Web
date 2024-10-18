@@ -12,6 +12,7 @@ body{
 .textoMotivador{
     font-size: 30px;
     background-color: #ffc107;
+    padding: 10px;
     h1{     
         color: #000000;
         text-align: center;
