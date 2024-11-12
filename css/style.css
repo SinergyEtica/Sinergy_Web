@@ -232,9 +232,8 @@ header{
     }
 }
 .textoSinergy{
-    padding: 2%;   
     font-size: 50px;
-    padding-left: 5%;
+    padding-bottom: 1%;
     display: inline-block;
     h1{     
         color: #ffffff;
@@ -278,7 +277,7 @@ header{
     padding-top: 50px;
 }
 
-.container{
+.container-cartas{
     position: relative;
     width: 350px;
     height: 550px;
@@ -301,7 +300,7 @@ header{
     backface-visibility: hidden;
 }
 
-.container:hover .flip{
+.container-cartas:hover .flip{
     transform: rotateY(180deg);
     
 }
@@ -321,4 +320,13 @@ header{
     grid-template-columns: 33% 33% 33%;
     text-align: center;
     margin: 20px 0;
+}
+
+.main-cartas{
+    padding: 2%;
+    padding-left: 11%;
+}
+
+main{
+    flex: 1 1 0;
 }
