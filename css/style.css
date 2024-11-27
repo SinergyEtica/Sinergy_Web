@@ -253,12 +253,11 @@ header{
       margin-right: auto;
 }
 
-.textoSinergy_reconhecimentos{
-    max-width:60%;
-    padding: 100px;
+.article-reconhecimento{
+    padding: 30px;
     margin: 0px;    
     font-size: 30px;
-    padding-left: 10%;
+    padding-left: 5%;
     display: inline-block;
     h1{     
         color: #ffffff;
@@ -340,6 +339,10 @@ main{
     display: flex; /* Define o contêiner como um flexbox */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
+}
+
+.article-reconhecimento{
+    text-align: justify;
 }
 
 @media(max-width: 1000px){   
@@ -446,7 +449,7 @@ main{
         padding-top: 40px;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; /* Centraliza verticalmente */
-        width: 80%;
+        width: 100%;
     
         img{
             border-radius: 20px;
@@ -457,8 +460,8 @@ main{
         display: flex; /* Define o contêiner como um flexbox */
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; /* Centraliza verticalmente */
-        height: 80%;
-        width: 80%;
+
+        
     }
     .trajetoria{
         max-width: 100%;
@@ -494,9 +497,31 @@ main{
             text-align: justify;
         }
     }
+    .article-forms{
+        margin-top: 20px;
+    }
+
+    iframe{
+        width: 400px;
+        height: 300px;
+        
+    }
+    .carrosel1{
+        margin-top: 10px;
+    }
 }
 @media(max-width: 400px){
     .article-forms{
+        margin-top: 50px;
+    }
+
+    iframe{
+        width: 300px;
+        height: 200px;
+        
+    }
+    
+    .carrosel1{
         margin-top: 50px;
     }
 }
