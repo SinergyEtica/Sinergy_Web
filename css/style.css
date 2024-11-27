@@ -29,6 +29,10 @@ body{
     grid-template-columns: 50% 50% 50%;
     text-align: center;
     margin: 20px 0;
+    img{
+        width: 600px;
+        height: 400px;
+    }
 }
 
 .image {
@@ -161,11 +165,11 @@ textarea {
 
 
 .container-lado{
-    width: 50%;
-    padding: 100px;
+    width: 90vh;
+    padding-top: 60px;
     margin: 0px;
     font-size: 30px;
-    padding-left: 100px;
+    margin-left: 100px;
     display: inline-block;
     h5{     
         color: #000000;
@@ -177,7 +181,7 @@ textarea {
     float: right;
     display: flex;
     padding-top: 40px;
-    padding-right: 700px;
+    margin-right: 500px;
     width: 100px;
     img{
         border-radius: 20px;
@@ -279,8 +283,9 @@ header{
 
 .container-cartas{
     position: relative;
-    width: 350px;
-    height: 550px;
+    img{width: 350px;
+        height: 550px;}
+
 }
 .flip{
     position: absolute;
@@ -291,7 +296,7 @@ header{
     transition: .8s;
 }
 
-.frente .tras{
+.frente,.tras{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -331,30 +336,13 @@ main{
     flex: 1 1 0;
 }
 
-.article-forms, .article-reconhecimento{
-    margin-top: 10px;
-    margin-left: 20px;
+.container-video{
+    display: flex; /* Define o contêiner como um flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
-
-@media(max-width: 768px){   
-    nav ul{
-        flex-direction: column;
-        width: 80%;
-    }
-    header{
-        flex-direction: column;
-        width: 80%;
-    }
-
-    img{
-        width: 85%;
-    }
-
-    .galeria_imagens_inicio{
-        flex-direction: column;
-    }
-
+@media(max-width: 1000px){   
     .jogo_de_cartas{
         flex-direction: column;
         width: 90%;
@@ -370,7 +358,20 @@ main{
     margin: 0px;  
     margin-left: 20px;
 }
- .galeria_imagens_inicio{
+    nav ul{
+        flex-direction: column;
+        width: 80%;
+    }
+    header{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    img{
+        width: 90%;
+    }
+
+    .galeria_imagens_inicio{
         flex-direction: column;
         
     }
@@ -494,9 +495,6 @@ main{
         }
     }
 }
-}
-
-
 @media(max-width: 400px){
     .article-forms{
         margin-top: 50px;
