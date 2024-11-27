@@ -370,7 +370,130 @@ main{
     margin: 0px;  
     margin-left: 20px;
 }
-
+ .galeria_imagens_inicio{
+        flex-direction: column;
+        
+    }
+    .container-images {
+        display: block;
+        text-align: center;
+    }
+    .image{
+            width: 350px;
+            height: 500px;
+    }
+    .image_imagens_meio{
+        img{
+        width: 350px;
+        height: 500px;
+        }
+}
+    .container-images-meio{
+        display: block;
+        text-align: center;
+        margin: 2px 0;
+        
+    }
+    .galeria_imagens_inicio{
+        .container-images{
+        margin: 0px;
+        box-shadow: 0 0 0 0px #ffc107;
+        img{
+            margin: 2px;
+            border-radius: 20px;
+        }
+    }
+    }
+    .main-cartas{
+        padding: 0%;
+        padding-left: 0%;
+    }
+    
+    main{
+        flex: 0 0 0;
+    }
+    
+    .galeria_imagens_meio img { margin: 0;}
+    .participacao{
+        h1{color: #ffc107; text-align: center; font-size: 50px; font-style:initial}
+        h2{color: aliceblue; text-align: center; font-size: 40px;}
+      }
+      .textoMotivador{
+        font-size: 20px;
+        background-color: #ffc107;
+        padding: 10px;
+        h1{     
+            color: #000000;
+            text-align: center;
+        }
+    }
+    .container-lado{
+        width: 80%;
+        padding-top: 60px;
+        font-size: 30px;
+        display: block;
+        margin-left: 30px;
+        h5{     
+            color: #000000;
+            text-align: justify;
+        }
+    }
+    
+    .container-images-lado{
+        float: none;
+        display: flex;
+        padding-top: 40px;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        width: 80%;
+    
+        img{
+            border-radius: 20px;
+        }
+        
+    }
+    .container-video{
+        display: flex; /* Define o contêiner como um flexbox */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 80%;
+        width: 80%;
+    }
+    .trajetoria{
+        max-width: 100%;
+        padding-top: 100px;
+        display: flex;
+        img{
+            width: 100%;
+        }
+    }
+    .sobre{
+        max-width: 100%;
+    }
+    .cartas-dinamicas{
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .container-cartas{
+        position: relative;
+        width: 60%;
+        img{
+            height: 100%;
+            width: 100%;
+            margin-bottom: 500px;  
+        }
+    }
+    .textoSinergy{
+        font-size: 30px;
+        padding-bottom: 1%;
+        display: inline-block;
+        h1{     
+            color: #ffffff;
+            text-align: justify;
+        }
+    }
+}
 }
 
 
