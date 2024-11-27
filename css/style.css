@@ -327,14 +327,15 @@ header{
     padding-left: 11%;
 }
 
-.article-forms{
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
 main{
     flex: 1 1 0;
 }
+
+.article-forms, .article-reconhecimento{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 
 @media(max-width: 768px){   
     nav ul{
@@ -368,7 +369,7 @@ main{
     padding: 0px;
     margin: 0px;  
     margin-left: 20px;
-    }
+}
 
 }
 
