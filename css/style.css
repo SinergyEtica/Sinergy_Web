@@ -741,8 +741,7 @@ main{
     text-align: center;
     margin: 20px 0;
     img{
-        width: 200px;
-        height: 75px;
+        height: 20vh;
     }
 }
 
