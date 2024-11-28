@@ -126,15 +126,35 @@ label {
     color: black;
 }
 
+
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
     width: 100%;
+    height: 4%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
-    border-radius: 20px;
+    border-radius: 5px;
     box-sizing: border-box;
+}
+
+.consentCheckbox {
+    display: flex; /* Configura o contêiner como um flexbox */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaço entre a checkbox e o texto */
+    margin-bottom: 20px; /* Adiciona espaçamento inferior */
+  }
+  
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer; /* Muda o cursor ao passar pela checkbox */
+  }
+.consentCheckbox{
+    width:100%;
+    display: inline-block;
 }
 
 .forms-button{
@@ -143,7 +163,7 @@ textarea {
 
 }
 .forms-button:hover{
-    background-color: #ffff07;
+    background-color: #ffc107;
 }
 
 .text_title_sac{
@@ -152,26 +172,50 @@ textarea {
 }
 
 .sobre{
-    width: 100%;
-    margin: 0px;
+    width: 30vw;
+    margin-left: 35vw;
     font-size: 30px;
-    background-color: #100f0d;
-    margin-top: 0px;
+    margin-top: 5vh;
+    display: block;
     h1{
-        color: #ffffff;
+        font-size: 3vh;
+        border-radius: 20px;
+        background-color: #ffc107;
+        color: #000000;
         text-align: center;
+        padding: 10px;
+    }
+}
+.pitch{
+    width: 30vw;
+    margin-left: 35vw;
+    font-size: 30px;
+    margin-top: 5vh;
+    display: block;
+    h1{
+        font-size: 3vh;
+        border-radius: 20px;
+        background-color: #ffc107;
+        color: #000000;
+        text-align: center;
+        padding: 10px;
     }
 }
 
 
 .container-lado{
-    width: 90vh;
-    padding-top: 60px;
+    width: 45vw;
+    height: 50vh;
+    padding-top: 9vh;
     margin: 0px;
-    font-size: 30px;
-    margin-left: 100px;
+    margin-left: 5vw;
     display: inline-block;
-    h5{     
+    h5{    
+        height: 50vh;
+        font-size: 1.3vw;
+        padding: 20px;
+        border-radius:20px ;
+        background-color: aliceblue; 
         color: #000000;
         text-align: justify;
     }
@@ -181,9 +225,12 @@ textarea {
     float: right;
     display: flex;
     padding-top: 40px;
-    margin-right: 500px;
-    width: 100px;
+    margin-top: 3vh;
+    margin-right: 35vw;
+    width: 12vh;
     img{
+        height: 50.8vh;
+        width: 80vh;
         border-radius: 20px;
     }
 }
@@ -207,30 +254,29 @@ textarea {
 header{
     padding-bottom: 90px;
 }
-.jogo_de_cartas{
-    padding-left: 10%;
-    
-    width: 650px;
-    display: inline-block;
-    
+.textoSinergy3{
     h1{
         color: #ffffff;
-        border-radius: 200px;
-        width: 140px;
-        padding-left: 50%;
+        width: 14vh;
+        text-align: center;
     }
+}
+.jogo_de_cartas{
+    margin-left: 10vw;
+    width: 45vw;
+    height: 40vh;
+    display: inline-block;
     img{
+        width: 30vw;
         padding-top: 20px;
     }
 }
 .textoSinergy2{
-    max-width:60%;
-    padding: 100px;
-    margin: 0px;    
-    font-size: 30px;
-    padding-left: 20%;
+    width: 80vmin;    
     display: inline-block;
-    h1{     
+    text-align: center;
+    h1{  
+        font-size: 2vw;   
         color: #ffffff;
         text-align: justify;
     }
@@ -253,15 +299,37 @@ header{
       margin-right: auto;
 }
 
-.article-reconhecimento{
-    padding: 30px;
-    margin: 0px;    
-    font-size: 30px;
-    padding-left: 5%;
-    display: inline-block;
-    h1{     
+.Sinergia{
+    margin-top: 2vw;
+    width: 100vw;
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+}
+.reconhecimentos_inicio{
+    width: 95vw;
+    margin-left:2.5vw;
+    box-shadow: 0 0 0 5px #ffc107;
+    .Sinergia{font-size: 50px;
         color: #ffffff;
+        text-align: center;}
+    h2{
+        padding-left: 10vh;
+        display: inline-block;
         text-align: justify;
+        width: 50vw;
+        height: 20vmax;
+        font-size: 25px;
+    }
+    .foto_premio{
+        display: inline-block;
+        justify-content: center;
+        img{
+            margin-bottom: 5vw;
+            margin-left: 10vw;
+            width: 25vw;
+            height: 30vw;
+        }
     }
 }
 .premio_sinergy{
@@ -282,9 +350,10 @@ header{
 
 .container-cartas{
     position: relative;
-    img{width: 350px;
-        height: 550px;}
-
+    width: 100%; /* Certifica-se de que o contêiner ocupe todo o espaço */
+    max-width: 350px; /* Define uma largura máxima, se necessário */
+    margin: 0 auto; /* Centraliza o contêiner */
+    height: 550px;
 }
 .flip{
     position: absolute;
@@ -300,8 +369,13 @@ header{
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px #000001;
     backface-visibility: hidden;
+    .card-content p {
+        overflow: hidden; /* Evita que o conteúdo vaze */
+        text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
+        white-space: normal; /* Permite quebra de linha */
+        word-wrap: break-word; /* Quebra palavras longas */
+      }
 }
 
 .container-cartas:hover .flip{
@@ -323,13 +397,9 @@ header{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     text-align: center;
-    margin: 20px 0;
+    margin: 0px 0;
 }
 
-.main-cartas{
-    padding: 2%;
-    padding-left: 11%;
-}
 
 main{
     flex: 1 1 0;
@@ -341,25 +411,32 @@ main{
     align-items: center; /* Centraliza verticalmente */
 }
 
-.article-reconhecimento{
-    text-align: justify;
+.article-forms{
+    margin-top: 4vh;
+    margin-left: 10vw;
+    max-width: 80%;
+}
+.SAC{
+    text-align: center;
+    color: #000000;
+    background-color: #ffc107;
+    border: 5px;
 }
 
-@media(max-width: 1000px){   
+@media(max-width: 900px){   
     .jogo_de_cartas{
         flex-direction: column;
         width: 90%;
     }
-
-    .textoSinergy{
-        margin-left: -100px;
-    }
 .textoSinergy2{
     flex-direction: column;
-    max-width:80%;
+    max-width:0%;
     padding: 0px;
     margin: 0px;  
     margin-left: 20px;
+    display: block;
+    h1{text-align: center;
+    }
 }
     nav ul{
         flex-direction: column;
@@ -383,13 +460,14 @@ main{
         text-align: center;
     }
     .image{
-            width: 350px;
+            width: 70vw;
             height: 500px;
     }
     .image_imagens_meio{
+        margin-bottom:20px ;
         img{
-        width: 350px;
-        height: 300px;
+        width: 70vw;
+        height: 500px;
         }
 }
     .container-images-meio{
@@ -400,12 +478,13 @@ main{
     }
     .galeria_imagens_inicio{
         .container-images{
-        margin: 0px;
-        box-shadow: 0 0 0 0px #ffc107;
-        img{
-            margin: 2px;
-            border-radius: 20px;
-        }
+            margin: 50px;
+            box-shadow: 0 0 0 5px #ffc107;
+            img{
+                margin: 20px;
+                border-radius: 20px;
+            }
+            padding-bottom: 30px;
     }
     }
     .main-cartas{
@@ -416,8 +495,26 @@ main{
     main{
         flex: 0 0 0;
     }
-    
-    .galeria_imagens_meio img { margin: 0;}
+    header{
+        ul{
+            font-size: 30px;
+        }
+        h5{
+            font-size: 45px;
+            font-weight: 500;
+        }
+        li{
+            font-size: 3vh;
+            width: 100%;
+        }
+
+    }
+    .dropdown-menu {
+        width: 100vw; /* Garante que a largura mínima preencha todo o texto */
+        padding: 0.5rem 1rem; /* Ajusta o espaço interno */
+        white-space: nowrap; /* Evita quebra de linha nos textos */
+        box-sizing: border-box; /* Inclui padding no cálculo da largura */
+      }
     .participacao{
         h1{color: #ffc107; text-align: center; font-size: 50px; font-style:initial}
         h2{color: aliceblue; text-align: center; font-size: 40px;}
@@ -432,12 +529,14 @@ main{
         }
     }
     .container-lado{
-        width: 80%;
+        
+        width: 80vw;
         padding-top: 60px;
-        font-size: 30px;
         display: block;
-        margin-left: 30px;
+        margin-left:10vw;
         h5{     
+            overflow: auto;
+            font-size: 2vh;
             color: #000000;
             text-align: justify;
         }
@@ -445,13 +544,13 @@ main{
     
     .container-images-lado{
         float: none;
-        display: flex;
-        padding-top: 40px;
+        display: block;
+        padding-top: 80px;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; /* Centraliza verticalmente */
-        width: 100%;
-    
+        margin-left: 10vw;
         img{
+            width: 80vw;
             border-radius: 20px;
         }
         
@@ -477,11 +576,10 @@ main{
     .cartas-dinamicas{
         display: block;
         text-align: center;
-        margin: 20px 0;
     }
     .container-cartas{
         position: relative;
-        width: 60%;
+        width: 100%;
         img{
             height: 100%;
             width: 100%;
@@ -501,27 +599,179 @@ main{
         margin-top: 20px;
     }
 
-    iframe{
-        width: 400px;
-        height: 300px;
-        
-    }
     .carrosel1{
         margin-top: 10px;
     }
-}
-@media(max-width: 400px){
-    .article-forms{
-        margin-top: 50px;
+    .textoSinergy3{
+        h1{
+            color: #ffffff;
+            width: 14vh;
+            text-align: center;
+        }
     }
+    .jogo_de_cartas{
+        margin-left: 15vw;
+        width: 45vw;
+        height: 40vh;
+        display: inline-block;
+        
+    
+        img{
+            width: 70vw;
+            height: 50vh;
+            padding-top: 20px;
+        }
+    }
+    .textoSinergy2 {
+        margin-top: 10vh;  
+        display: block;
+        margin-left: 10vw;
+        h1 {  
+            width: 80vw;
+            font-size: 24px;   
+            color: #ffffff;
+            text-align: center;
+        }
+    }
+    .textoSinergy{
+        font-size: 50px;
+        padding-bottom: 1%;
+        display: inline-block;
+        h1{     
+            color: #ffffff;
+            text-align: justify;
+        }
+    }
+    .Sinergia{
+        margin-top: 2vh;
+        width: 100vw;
+        font-size: 50px;
+        color: #ffffff;
+        text-align: center;
+    }
+    .reconhecimentos_inicio{
+        width: 95vw;
+        margin-left:2.5vw;
+        box-shadow: 0 0 0 5px #ffc107;
+        .Sinergia{font-size: 50px;
+            
+            color: #ffffff;
+            text-align: center;}
+        h2{
+            padding-left: 2.5vh;
+            display: block;
+            text-align: justify;
+            width: 90vw;
+            height: 20vmax;
+            font-size: 20px;
+        }
+        .foto_premio{
+            display: block;
+            justify-content: center;
+            margin-top: 100px;
+            img{
+                margin-bottom: 5vw;
+                margin-left: 10vw;
+                width: 75vw;
+                height: 90vw;
+            }
+        }
+        .container-cartas{
+            position: relative;
+            width: 350px;
+            height: 550px;
+            justify-content: center;
+        }
+        .flip{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transform-style: preserve-3d;
+            transition: .8s;
+        }
+        
+        .frente,.tras{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px #000001;
+            backface-visibility: hidden;
+        }
+        
+        .container-cartas:hover .flip{
+            transform: rotateY(180deg);
+            
+        }
+        .frente{
+            background-size: cover;
+            background-color: orange;
+            
+        }
+        
+        .tras{
+            background-color: white;
+            transform:rotateY(180deg);
+            color: black;
+            text-align: center;
+        }
+        .cartas-dinamicas{
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+        textoSinergyTrincas{
+            font-size: 50px;
+            padding-bottom: 1%;
+            display: inline-block;
+            h1{     
+                color: #ffffff;
+                text-align: center;
+            }
+        }
 
+    }
     iframe{
-        width: 300px;
-        height: 200px;
         
     }
+
+}
+
+@media(max-width: 407px){
+
+    .article-forms{
+        margin-top: 10vh;
+    }
+    .sobre{
+        margin-top: 10vh;
+    }
+    .container-lado{
+       padding-top: 30px;
+    }
+
+
     
     .carrosel1{
         margin-top: 50px;
+    }
+    .Sinergia{
+        margin-top: 5vh;
+    }
+    .reconhecimentos_inicio{
+        width: 95vw;
+        margin-left:2.5vw;
+        box-shadow: 0 0 0 5px #ffc107;
+        .foto_premio{
+            display: block;
+            justify-content: center;
+            margin-top: 200px;
+            img{
+                margin-bottom: 5vw;
+                margin-left: 10vw;
+                width: 75vw;
+                height: 90vw;
+            }
+        }
     }
 }
