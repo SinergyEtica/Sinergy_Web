@@ -735,6 +735,16 @@ main{
     iframe{
         
     }
+    .container-images-meio{
+    display: grid;
+    grid-template-columns: 50% 50% 50%;
+    text-align: center;
+    margin: 20px 0;
+    img{
+        width: 200px;
+        height: 75px;
+    }
+}
 
 }
 
