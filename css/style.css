@@ -629,7 +629,7 @@ header{
         }
     }
     .container-lado{
-        
+        margin-top: 20px;
         width: 80vw;
         padding-top: 60px;
         display: block;
@@ -643,7 +643,7 @@ header{
     }
     
     .container-images-lado{
-        margin-top: 400px;
+        margin-top: 450px;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; /* Centraliza verticalmente */
         margin-left: 10vw;
@@ -847,14 +847,14 @@ header{
     }
     .dashboard{
         width: 400px;
-        height: 500px;
+        height: 400px;
     }
     .sac-form{
         width: 40vh;
     }
 }
 
-@media(max-width: 407px){
+@media(max-width: 426px){
     .logo_sinergy img{
         height:70px;
         width:20px;
@@ -872,12 +872,11 @@ header{
     .carousel-container {
         margin-top: 10vh;
         width: 90%; /* Ocupa 70% da largura da tela */
-        margin: 0 auto; /* Centraliza horizontalmente */
+     /* Centraliza horizontalmente */
         position: relative; /* Mantém o conteúdo posicionado */
       border-radius: 15px; /* Define as bordas arredondadas */
       overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona um sombreamento elegante (opcional) */
-        margin-top: 5vh;
       }
     .carousel-inner img {
         object-fit: cover; /* Garante que as imagens fiquem bem ajustadas *//* Define uma altura padrão */
@@ -906,34 +905,23 @@ header{
             width: 250px;
             height: 200px;
         }
-    }
 
     .carousel-container{
         margin-top: 80px;
     }
 
     .container-images-lado{
-        margin-top: 150vw;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente */
-        margin-left: 10vw;
-        img{
-            width: 80vw;
-            border-radius: 20px;
-        }
-        
-    }
-        h3{
-        margin-top: 20px;
+        margin-top: 500px;
     }
     .main-cartas{
         margin-left: 1vh;
         margin-right: 1vh;
     }
     .reconhecimentos_inicio{
-        margin-top: 4vh;
+        margin-top: 10px;
     }
     .dashboard{
         width: 300px;
         height: 300px;
     }
+}
