@@ -10,47 +10,64 @@
     
     <title>Sinergy</title>
 </head>
-<body style="background-color: #000000">
+<body style="background-color: white">
   <header>
-    <nav class="navbar navbar-light bg-warning fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/logo_sinergy.png" alt="Logo Sinergy" width="300" height="70" class="d-inline-block align-text-top align-middle">
-          <span class="align-middle"></span>
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center"  alt="Logo Sinergy" href="index.html">
+          <img src="assets/logo_sinergy.png" id="logo_sinergy" height="70" width="300" class="d-inline-block align-text-top">
+          <span class="ms-2"></span>
         </a>
-        <!-- resto do código -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-label="Toggle navigation">
+  
+        <!-- Botão para offcanvas -->
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasNavbar" 
+          aria-controls="offcanvasNavbar" 
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end text-bg-warning" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+  
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasLightNavbarLabel">Barra de pesquisa</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
+            <!-- Menu centralizado -->
+            <ul class="navbar-nav text-center">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Pagina Principal</a>
+                <a class="nav-link text-white" aria-current="page" href="index.html" style="font-size: 20px;">Página Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="sobre.html">Sobre nós</a>
+                <a class="nav-link text-white" href="sobre.html" style="font-size: 20px;">Sobre nós</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="projetos.html">Projetos</a>
+                <a class="nav-link text-white" href="projetos.html" style="font-size: 20px;">Projetos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cartas.html">Teste Aqui!</a>
+                <a class="nav-link text-white" href="cartas.html" style="font-size: 20px;">Teste aqui!</a>
               </li>
+              <!-- Dropdown -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a 
+                  class="nav-link dropdown-toggle text-white" 
+                  href="#" 
+                  id="navbarDropdown" 
+                  role="button" 
+                  data-bs-toggle="dropdown" 
+                  aria-expanded="false"
+                  style="margin-right: 18vw;font-size: 20px;">
                   Mais
                 </a>
-                <ul class="dropdown-menu dropdown-menu-light">
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="reconhecimentos.html">Reconhecimentos</a></li>
                   <li><a class="dropdown-item" href="dashboardview.html">Dashboard de Impactos</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
+                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="formulario.html">SAC</a></li>
                 </ul>
               </li>
@@ -59,34 +76,37 @@
         </div>
       </div>
     </nav>
-  </header>
-    <div class="sobre">
-        <h1>SOBRE</h1>
-    </div>
+  </header> 
 
-  
-    <div class="container-lado">
-     <h5>Somos a equipe Sinergy, composta por Alice Rodrigues, Isabelly Costa, Mellina Bazil, Rafael Tanus e Rennan Pimentel. Participamos do Grand Prix de Ideias Éticas da FIRJAN, o Hack e Ética, uma competição proposta aos estudantes do SESI/SENAI. Nesse desafio, fomos Instigados de criar uma solução inovadora para incentivar o respeito nas relações interpessoais, ambientais e empresariais. Como resposta, desenvolvemos o jogo "Sinergia". O desafio contou com 414 propostas de 24 diferentes unidades da FIRJAN, sendo 61 delas oriundas da unidade de Jacarepaguá. No dia 16 de junho, descobrimos que apenas 16 projetos avançaram para a fase final do Grand Prix. No dia 27 de agosto, três desses projetos foram premiados pela inovação, e entre eles estava o Sinergia, ao lado de outras duas equipes.</h6>
-    </div>
+  <main class="mainsobre">
+    <section class="sobreprincipal">
+    <section class="container-lado">
+      <H3> SOBRE NÓS</H3>
+      <h1>Equipe Sinergy</h1>
+     <p>Somos a equipe Sinergy, composta por Alice Rodrigues, Isabelly Costa, Mellina Bazil, Rafael Tanus e Rennan Pimentel. Participamos do Grand Prix de Ideias Éticas da FIRJAN, o Hack e Ética, uma competição proposta aos estudantes do SESI/SENAI. Nesse desafio, fomos Instigados de criar uma solução inovadora para incentivar o respeito nas relações interpessoais, ambientais e empresariais. Como resposta, desenvolvemos o jogo "Sinergia". O desafio contou com 414 propostas de 24 diferentes unidades da FIRJAN, sendo 61 delas oriundas da unidade de Jacarepaguá. No dia 16 de junho, descobrimos que apenas 16 projetos avançaram para a fase final do Grand Prix. No dia 27 de agosto, três desses projetos foram premiados pela inovação, e entre eles estava o Sinergia, ao lado de outras duas equipes.</h6>
+     <br>
+     <button onclick="document.getElementById('trajetoria').scrollIntoView({behavior: 'smooth'})" class="botao_trajetoria"> Veja nossa Trajetória</button>
+    </section>
     
     <div class="container-images-lado">
         <img src="assets/foto_sinergy_premios.jpg" width="580" height="387.5">
     </div>
-
-    <div class="trajetoria">
+  </section>
+    <div class="trajetoria" id="trajetoria">
       <img src="assets/tajertoria.png">
     </div>
-
+  
 
     <div class="pitch">
       <h1>PITCH
       </h1>
   </div>
   <br>
-  <section class="container-video">
+  <section class="container-video" >
   <iframe width="720" height="480" src="https://www.youtube.com/embed/Vc2yslBfkS0?si=63O_VNxfsztppWz2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </section>
 <br>
+</main>
 <footer class="bg-dark text-white py-3">
   <div class="container">
       <div class="d-flex justify-content-center align-items-center">

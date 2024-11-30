@@ -15,8 +15,6 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: rgb(2,0,36);
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,65,158,1) 0%, rgba(117,107,0,1) 0%, rgba(255,233,0,1) 100%, rgba(255,255,7,1) 100%);
         }
         iframe {
             width: 95%;
@@ -32,7 +30,7 @@
           align-items: center;
           height: 100vh;
           margin: 0;
-          background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,65,158,1) 0%, rgba(117,107,0,1) 0%, rgba(255,233,0,1) 100%, rgba(255,255,7,1) 100%);
+          background: #202122;
       }
   
       iframe {
@@ -78,48 +76,65 @@
       }
   </style>
 </head>
-<body style="background-color: yellow;">
+<body style="background-color:#202122;">
 
   <header>
-    <nav class="navbar navbar-light bg-warning fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/logo_sinergy.png" alt="Logo Sinergy" width="300" height="70" class="d-inline-block align-text-top align-middle">
-          <span class="align-middle"></span>
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center"  alt="Logo Sinergy" href="index.html">
+          <img src="assets/logo_sinergy.png" id="logo_sinergy" height="70" width="300" class="d-inline-block align-text-top">
+          <span class="ms-2"></span>
         </a>
-        <!-- resto do código -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-label="Toggle navigation">
+  
+        <!-- Botão para offcanvas -->
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasNavbar" 
+          aria-controls="offcanvasNavbar" 
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end text-bg-warning" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+  
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasLightNavbarLabel">Barra de pesquisa</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
+            <!-- Menu centralizado -->
+            <ul class="navbar-nav text-center">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Pagina Principal</a>
+                <a class="nav-link text-white" aria-current="page" href="index.html" style="font-size: 20px;">Página Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="sobre.html">Sobre nós</a>
+                <a class="nav-link text-white" href="sobre.html" style="font-size: 20px;">Sobre nós</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="projetos.html">Projetos</a>
+                <a class="nav-link text-white" href="projetos.html" style="font-size: 20px;">Projetos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cartas.html">Teste Aqui!</a>
+                <a class="nav-link text-white" href="cartas.html" style="font-size: 20px;">Teste aqui!</a>
               </li>
+              <!-- Dropdown -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a 
+                  class="nav-link dropdown-toggle text-white" 
+                  href="#" 
+                  id="navbarDropdown" 
+                  role="button" 
+                  data-bs-toggle="dropdown" 
+                  aria-expanded="false"
+                  style="margin-right: 18vw;font-size: 20px;">
                   Mais
                 </a>
-                <ul class="dropdown-menu dropdown-menu-light">
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="reconhecimentos.html">Reconhecimentos</a></li>
                   <li><a class="dropdown-item" href="dashboardview.html">Dashboard de Impactos</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
+                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="formulario.html">SAC</a></li>
                 </ul>
               </li>

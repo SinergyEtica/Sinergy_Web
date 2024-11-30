@@ -7,21 +7,35 @@ body{
     height: 85vh;
     width: 100%;
 }
-.textoMotivador{
-    font-size: 30px;
-    background-color: #ffc107;
-    padding: 10px;
-    h1{     
-        color: #000000;
+
+.galeria_imagens_inicio{
+    width: 70vw;
+    margin: 50px;
+    margin-left: 15vw;
+    box-shadow: 0 0 0 10px #ffc107;
+    h1{
+    
         text-align: center;
+        color:#212529; 
+        font-size: 60px;
+    }
+    h2{
+        color: #212529;
+    }
+    .container-images{
+
+    img{
+        margin: 20px;
+        border-radius: 20px;
     }
 }
-
+}
 .container-images {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     text-align: center;
     margin: 20px 0;
+    
 
 }
 .container-images-meio{
@@ -29,9 +43,13 @@ body{
     grid-template-columns: 50% 50% 50%;
     text-align: center;
     margin: 20px 0;
+
     img{
         width: 600px;
         height: 400px;
+    }
+    h5{
+        color: #000000;
     }
 }
 
@@ -51,23 +69,10 @@ body{
 }
 
 
-.galeria_imagens_inicio{
-    h2{
-        color: #ffc107;
-    }
-    .container-images{
-    margin: 50px;
-    box-shadow: 0 0 0 5px #ffc107;
-    img{
-        margin: 20px;
-        border-radius: 20px;
-    }
-}
-}
 
 .participacao{
-  h1{color: #ffc107; text-align: center; font-size: 100px; font-style:initial}
-  h2{color: aliceblue; text-align: center; font-size: 80px;}
+  h1{color: #212529; text-align: center; font-size: 100px; font-style:initial}
+  h2{color: #ffc107; text-align: center; font-size: 80px;}
 }
 
 .galeria_imagens_meio{
@@ -90,7 +95,8 @@ body{
         margin: 10px;
         border-radius: 10px;
         h4{
-            color: #ffc107;
+            font-size: 30px;
+            color: #212529;
         }
     }
     img{
@@ -98,6 +104,27 @@ body{
         margin: 10px;
     }
 }
+
+.botao_trajetoria {
+        background-color: #ffd700; /* Cor de fundo dourada */
+        color: #000; /* Cor do texto */
+        border: none; /* Remove a borda */
+        border-radius: 10px;
+        width: 15vw;
+        height: 7vh;
+        margin-top: 2vh;
+        font-size: 18px; /* Tamanho do texto */
+        cursor: pointer; /* Cursor de mão ao passar por cima */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+        transition: transform 0.2s, background-color 0.3s; /* Efeitos suaves */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      
+.botao_trajetoria:hover {
+        background-color: #ffc107; /* Muda a cor ao passar o mouse */
+        transform: scale(1.05); /* Aumenta levemente o botão */
+      }
+
 
 .textoFormulário{
     padding: 20px;
@@ -110,14 +137,14 @@ body{
 }
 
 .sac-form{
-    max-width: 80%;
+    width: 50%;
     height: 40%;
     margin: 50px auto;
     padding: 20px;
     background-color: #ffc107;
     border: 1px solid #ddd;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
 }
 
 label {
@@ -159,8 +186,6 @@ textarea {
 
 .forms-button{
     border-radius: 5px;
-
-
 }
 .forms-button:hover{
     background-color: #ffc107;
@@ -202,20 +227,26 @@ textarea {
     }
 }
 
-
 .container-lado{
     width: 45vw;
     height: 50vh;
     padding-top: 9vh;
     margin: 0px;
-    margin-left: 5vw;
+    margin-left: 6vw;
     display: inline-block;
-    h5{    
+    h3{
+        font-size: 30px;
+        color: black;
+    }
+    h1{
+        color: #000000;
+        font-size: 50px;
+    }
+    p{    
+        margin-top: 2vh;
         height: 50vh;
-        font-size: 1.3vw;
-        padding: 20px;
+        font-size: 18px;
         border-radius:20px ;
-        background-color: aliceblue; 
         color: #000000;
         text-align: justify;
     }
@@ -225,7 +256,7 @@ textarea {
     float: right;
     display: flex;
     padding-top: 40px;
-    margin-top: 3vh;
+    margin-top: 20vh;
     margin-right: 35vw;
     width: 12vh;
     img{
@@ -234,10 +265,15 @@ textarea {
         border-radius: 20px;
     }
 }
+.sobreprincipal{
+    height: 70vh;
+    padding-bottom: 10vh ;
+    
+}
 
 .trajetoria{
     width: 100%;
-    padding-top: 100px;
+    margin-top: 30vh;
     display: flex;
     img{
         width: 100%;
@@ -253,6 +289,9 @@ textarea {
 }
 header{
     padding-bottom: 90px;
+    a{
+        font-weight: 600;
+    }
 }
 .textoSinergy3{
     h1{
@@ -261,9 +300,13 @@ header{
         text-align: center;
     }
 }
-.jogo_de_cartas{
+/* Add this CSS to your stylesheet */
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+  }
+  .jogo_de_cartas{
     margin-left: 10vw;
-    width: 45vw;
     height: 40vh;
     display: inline-block;
     img{
@@ -275,16 +318,28 @@ header{
     width: 80vmin;    
     display: inline-block;
     text-align: center;
+    margin-left:15vh ;
     h1{  
-        font-size: 2vw;   
+        font-size: 25px;   
         color: #ffffff;
         text-align: justify;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 }
 .textoSinergy{
     font-size: 50px;
     padding-bottom: 1%;
     display: inline-block;
+    h1{     
+        color: #ffffff;
+        text-align: justify;
+    }
+}
+.textoSinergyCartas{
+    font-size: 50px;
+    padding-bottom: 1%;
+    display: inline-block;
+    margin-left: 15vh;
     h1{     
         color: #ffffff;
         text-align: justify;
@@ -303,35 +358,35 @@ header{
     margin-top: 2vw;
     width: 100vw;
     font-size: 50px;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
 }
-.reconhecimentos_inicio{
-    width: 95vw;
-    margin-left:2.5vw;
-    box-shadow: 0 0 0 5px #ffc107;
-    .Sinergia{font-size: 50px;
-        color: #ffffff;
-        text-align: center;}
-    h2{
-        padding-left: 10vh;
+    .Apresentacao{
+        padding-left: 5vw;
         display: inline-block;
         text-align: justify;
+        color: #000000;
         width: 50vw;
-        height: 20vmax;
         font-size: 25px;
+        h2{
+            font-size: 25px;
+        }
+    
     }
+    
     .foto_premio{
         display: inline-block;
-        justify-content: center;
         img{
-            margin-bottom: 5vw;
-            margin-left: 10vw;
-            width: 25vw;
-            height: 30vw;
+            width: 20vw;
+            height: 50vh;
+            margin-left: 15vw;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20vh;
         }
     }
-}
+
 .premio_sinergy{
     padding-right: 25%;
     
@@ -347,8 +402,15 @@ header{
 .reconhecimentos_inicio{
     padding-top: 50px;
 }
+.cartas-dinamicas{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    margin: 0px 0;
 
+}
 .container-cartas{
+
     position: relative;
     width: 100%; /* Certifica-se de que o contêiner ocupe todo o espaço */
     max-width: 350px; /* Define uma largura máxima, se necessário */
@@ -370,6 +432,10 @@ header{
     height: 100%;
     border-radius: 20px;
     backface-visibility: hidden;
+    img{
+        border-radius: 20px;
+    }
+    
     .card-content p {
         overflow: hidden; /* Evita que o conteúdo vaze */
         text-overflow: ellipsis; /* Adiciona reticências se o texto for muito longo */
@@ -393,17 +459,7 @@ header{
     color: black;
     text-align: center;
 }
-.cartas-dinamicas{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    text-align: center;
-    margin: 0px 0;
-}
 
-
-main{
-    flex: 1 1 0;
-}
 
 .container-video{
     display: flex; /* Define o contêiner como um flexbox */
@@ -419,9 +475,50 @@ main{
 .SAC{
     text-align: center;
     color: #000000;
-    background-color: #ffc107;
     border: 5px;
 }
+
+.dropdown-menu {
+    width: 100vw; /* Garante que a largura mínima preencha todo o texto */
+    padding: 0.5rem 1rem; /* Ajusta o espaço interno */
+    white-space: nowrap; /* Evita quebra de linha nos textos */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+  }
+  .carousel-container {
+    width: 70%; /* Ocupa 70% da largura da tela */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    position: relative; /* Mantém o conteúdo posicionado */
+  border-radius: 15px; /* Define as bordas arredondadas */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona um sombreamento elegante (opcional) */
+    margin-top: 5vh;
+  }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo preto semi-transparente */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    max-width: 70%; /* Limita a largura do texto */
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  
+  .carousel-caption h5 {
+    font-size: 1.5rem; /* Ajusta o tamanho do título */
+  }
+  
+  .carousel-inner img {
+    object-fit: cover; /* Garante que as imagens fiquem bem ajustadas *//* Define uma altura padrão */
+    height: 70vh;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-inner img {
+      height: 250px; /* Reduz a altura para dispositivos menores */
+    }
+  }
+  
+
 
 @media(max-width: 900px){   
     .jogo_de_cartas{
@@ -474,12 +571,16 @@ main{
         display: block;
         text-align: center;
         margin: 2px 0;
-        
+        img{
+            width: 350px;
+            height: 300px;
+        }
     }
     .galeria_imagens_inicio{
+        h1{
+            font-size: 35px;
+        }
         .container-images{
-            margin: 50px;
-            box-shadow: 0 0 0 5px #ffc107;
             img{
                 margin: 20px;
                 border-radius: 20px;
@@ -488,8 +589,8 @@ main{
     }
     }
     .main-cartas{
-        padding: 0%;
-        padding-left: 0%;
+        margin-left: 2vh;
+        margin-right: 2vh;
     }
     
     main{
@@ -505,16 +606,15 @@ main{
         }
         li{
             font-size: 3vh;
-            width: 100%;
+            width: 0%;
         }
 
     }
-    .dropdown-menu {
-        width: 100vw; /* Garante que a largura mínima preencha todo o texto */
-        padding: 0.5rem 1rem; /* Ajusta o espaço interno */
-        white-space: nowrap; /* Evita quebra de linha nos textos */
-        box-sizing: border-box; /* Inclui padding no cálculo da largura */
+
+    .botao_trajetoria {
+        width: 30vw;
       }
+
     .participacao{
         h1{color: #ffc107; text-align: center; font-size: 50px; font-style:initial}
         h2{color: aliceblue; text-align: center; font-size: 40px;}
@@ -543,14 +643,14 @@ main{
     }
     
     .container-images-lado{
-        float: none;
-        display: block;
-        padding-top: 80px;
+        margin-top: 400px;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; /* Centraliza verticalmente */
         margin-left: 10vw;
+        margin-bottom: 20px;
         img{
-            width: 80vw;
+            width: 350px;
+            height: 300px;
             border-radius: 20px;
         }
         
@@ -564,7 +664,6 @@ main{
     }
     .trajetoria{
         max-width: 100%;
-        padding-top: 100px;
         display: flex;
         img{
             width: 100%;
@@ -642,13 +741,7 @@ main{
             text-align: justify;
         }
     }
-    .Sinergia{
-        margin-top: 2vh;
-        width: 100vw;
-        font-size: 50px;
-        color: #ffffff;
-        text-align: center;
-    }
+
     .reconhecimentos_inicio{
         width: 95vw;
         margin-left:2.5vw;
@@ -657,6 +750,7 @@ main{
             
             color: #ffffff;
             text-align: center;}
+        
         h2{
             padding-left: 2.5vh;
             display: block;
@@ -733,23 +827,38 @@ main{
 
     }
     iframe{
-        
+        width: 350px;
+        height: 300px;
     }
-    .container-images-meio{
-    display: grid;
-    grid-template-columns: 50% 50% 50%;
-    text-align: center;
-    margin: 20px 0;
-    img{
-        width:350px;
-        height:300px;
+    .textoSinergyCartas{
+        margin-left: -10px;
     }
-}
-
+    
+    .Apresentacao{
+        padding-left: 1vw;
+        display: inline-block;
+        text-align: justify;
+        color: #000000;
+        width: 50vw;
+        font-size: 25px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    .dashboard{
+        width: 400px;
+        height: 500px;
+    }
+    .sac-form{
+        width: 40vh;
+    }
 }
 
 @media(max-width: 407px){
-
+    .logo_sinergy img{
+        height:70px;
+        width:20px;
+    }
     .article-forms{
         margin-top: 10vh;
     }
@@ -760,7 +869,20 @@ main{
        padding-top: 30px;
     }
 
-
+    .carousel-container {
+        margin-top: 10vh;
+        width: 90%; /* Ocupa 70% da largura da tela */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        position: relative; /* Mantém o conteúdo posicionado */
+      border-radius: 15px; /* Define as bordas arredondadas */
+      overflow: hidden; /* Garante que o conteúdo não ultrapasse as bordas */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona um sombreamento elegante (opcional) */
+        margin-top: 5vh;
+      }
+    .carousel-inner img {
+        object-fit: cover; /* Garante que as imagens fiquem bem ajustadas *//* Define uma altura padrão */
+        height: 20vh;
+      }
     
     .carrosel1{
         margin-top: 50px;
@@ -769,19 +891,49 @@ main{
         margin-top: 5vh;
     }
     .reconhecimentos_inicio{
+        margin-top: 20px;
         width: 95vw;
         margin-left:2.5vw;
         box-shadow: 0 0 0 5px #ffc107;
-        .foto_premio{
-            display: block;
-            justify-content: center;
-            margin-top: 200px;
-            img{
-                margin-bottom: 5vw;
-                margin-left: 10vw;
-                width: 75vw;
-                height: 90vw;
+       
             }
         }
+    .container-images-meio{
+        display: block;
+        text-align: center;
+        margin: 2px 0;
+        img{
+            width: 250px;
+            height: 200px;
+        }
     }
-}
+
+    .carousel-container{
+        margin-top: 80px;
+    }
+
+    .container-images-lado{
+        margin-top: 150vw;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        margin-left: 10vw;
+        img{
+            width: 80vw;
+            border-radius: 20px;
+        }
+        
+    }
+        h3{
+        margin-top: 20px;
+    }
+    .main-cartas{
+        margin-left: 1vh;
+        margin-right: 1vh;
+    }
+    .reconhecimentos_inicio{
+        margin-top: 4vh;
+    }
+    .dashboard{
+        width: 300px;
+        height: 300px;
+    }
