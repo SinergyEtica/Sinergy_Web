@@ -112,7 +112,7 @@ body{
         border-radius: 10px;
         width: 15vw;
         height: 7vh;
-        margin-top: 2vh;
+        
         font-size: 18px; /* Tamanho do texto */
         cursor: pointer; /* Cursor de mão ao passar por cima */
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
@@ -612,7 +612,9 @@ header{
     }
 
     .botao_trajetoria {
-        width: 30vw;
+        width: 50vw;
+        margin: 50vw;
+        margin-left: 10px;
       }
 
     .participacao{
@@ -924,4 +926,14 @@ header{
         width: 300px;
         height: 300px;
     }
+    .sobreprincipal{
+        font-size: 10px;
+    }
+
+    .botao_trajetoria {
+        width: 50vw;
+        margin: 50vw;
+        margin-left: 10px;
+        margin-top: 20px;
+      }
 }
